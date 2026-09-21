@@ -1,75 +1,45 @@
-# React + TypeScript + Vite
+# ♻️ EcoSort AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### AI-Powered Waste Identification & Responsible Disposal Assistant
 
-Currently, two official plugins are available:
+EcoSort AI is a sustainability-focused AI application designed to help users identify everyday waste, classify it into an appropriate waste category, and receive responsible disposal guidance.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The project was developed as part of the **1M1B AI for Sustainability Virtual Internship**, in collaboration with **IBM SkillsBuild & AICTE**.
 
-## React Compiler
+> **Primary SDG:** SDG 12 — Responsible Consumption and Production
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🌱 Problem
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Waste segregation can be confusing when people are unsure how to classify an item or how it should be disposed of.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Common challenges include:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Difficulty identifying unfamiliar waste items
+- Incorrect waste segregation
+- Lack of accessible disposal guidance
+- Limited awareness of recycling and reuse practices
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+EcoSort AI aims to make this decision simpler through an image-based AI-assisted workflow.
 
-```
+---
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+## 💡 Solution
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+EcoSort AI allows a user to upload an image of a waste item.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+The intended workflow is:
 
-```
+```text
+📷 Upload Waste Image
+        ↓
+🧠 Multimodal AI Analysis
+        ↓
+🔍 Identify Waste Item
+        ↓
+♻️ Classify Waste Category
+        ↓
+🗑️ Disposal Guidance
+        ↓
+🌱 Eco Tip
